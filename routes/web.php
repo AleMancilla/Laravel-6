@@ -24,3 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('hola', function() {
     return 'Hola Alejandro Mancilla';
 });
+
+Route::get('usuario/{nombre}',function($nombre){
+    return 'Usuario '.$nombre;
+});
