@@ -25,6 +25,6 @@ Route::get('hola', function() {
     return 'Hola Alejandro Mancilla';
 });
 
-Route::get('usuario/{nombre}',function($nombre){
+Route::get('usuario/{nombre?}',function($nombre='Invitado'){
     return 'Usuario '.$nombre;
 });
