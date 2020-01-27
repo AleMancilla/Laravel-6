@@ -28,3 +28,7 @@ Route::get('hola', function() {
 Route::get('usuario/{nombre?}',function($nombre='Invitado'){
     return 'Usuario '.$nombre;
 });
+
+Route::get('usuario/{nombre}/comentario/{comentarioid}',function($nombre, $comentarioid){
+    return 'Usuario '.$nombre.' y el comentario es '.$comentarioid;
+});
