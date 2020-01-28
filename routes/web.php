@@ -27,9 +27,7 @@ Route::get('hola', function() {
 
 Route::get('usuario/{nombre?}','usuarioController@usuariounparametro')->name('usuarionombre');
 
-Route::get('usuario/{nombre}/comentario/{comentarioid}',function($nombre, $comentarioid){
-    return 'Usuario '.$nombre.' y el comentario es '.$comentarioid;
-});
+Route::get('usuario/{nombre}/comentario/{comentarioid}','usuarioController@usuariodosparametro');
 
 Route::get('user/{nombre}',function($nombre){
     return 'Usuario '.$nombre;
