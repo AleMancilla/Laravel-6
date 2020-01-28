@@ -54,3 +54,18 @@ Route::redirect('/prueba3','/prueba');
 #en controladores se buscan rutas parecidas
 
 Route::resource('varios','cariosmetodosrecursos');
+
+Route::resource('varios1','cariosmetodosrecursos')->only([
+    'index','show'
+]);
+
+Route::resource('varios2','cariosmetodosrecursos')->except([
+    'create','store','update','destroy'
+]);
+
+Route::resource('varios3','cariosmetodosrecursos')->only([
+    'index','show'
+])->names([
+    'index'=> 'inicio'
+]);
+
