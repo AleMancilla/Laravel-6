@@ -21,9 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::get('hola', function() {
-    return 'Hola Alejandro Mancilla';
-});
+Route::get('hola', 'holaController');
 
 Route::get('usuario/{nombre?}','usuarioController@usuariounparametro')->name('usuarionombre');
 
