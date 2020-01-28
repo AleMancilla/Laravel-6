@@ -49,3 +49,11 @@ Route::get('user2/{id}/{nombre}',function($id,$nombre){
         'nombre'=> '[A-Za-z]+'
     ]
 );
+
+Route::get('prueba', function(){
+    return 'Pagina de prueba...';
+})->name('pruebaroute');
+
+Route::get('redirigirprueba', function(){
+    return redirect()->route('pruebaroute');
+});
