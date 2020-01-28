@@ -52,3 +52,5 @@ Route::get('redirigirprueba1', function(){
 Route::redirect('/prueba3','/prueba');
 
 #en controladores se buscan rutas parecidas
+
+Route::resource('varios','cariosmetodosrecursos');
