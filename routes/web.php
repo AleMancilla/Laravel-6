@@ -62,3 +62,5 @@ Route::get('redirigirprueba', function(){
 Route::get('redirigirprueba1', function(){
     return redirect()->route('usuarionombre', ['nombre'=>'Alejandrooo']);
 });
+
+Route::redirect('/prueba3','/prueba');
