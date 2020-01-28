@@ -25,9 +25,7 @@ Route::get('hola', function() {
     return 'Hola Alejandro Mancilla';
 });
 
-Route::get('usuario/{nombre?}',function($nombre='Invitado'){
-    return 'Usuario '.$nombre;
-})->name('usuarionombre');
+Route::get('usuario/{nombre?}','usuarioController@usuariounparametro')->name('usuarionombre');
 
 Route::get('usuario/{nombre}/comentario/{comentarioid}',function($nombre, $comentarioid){
     return 'Usuario '.$nombre.' y el comentario es '.$comentarioid;
@@ -64,3 +62,5 @@ Route::get('redirigirprueba1', function(){
 });
 
 Route::redirect('/prueba3','/prueba');
+
+#en controladores se buscan rutas parecidas
