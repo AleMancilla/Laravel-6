@@ -40,3 +40,12 @@ Route::get('user/{nombre}',function($nombre){
 Route::get('user1/{nombre}',function($nombre){
     return 'Usuario '.$nombre;
 })->where('nombre', '[0-9]+');
+
+Route::get('user2/{id}/{nombre}',function($id,$nombre){
+    return 'Usuario '.$id. ' y el nombre es '.$nombre;
+})->where(
+    [
+        'id' => '[0-9]+',
+        'nombre'=> '[A-Za-z]+'
+    ]
+);
