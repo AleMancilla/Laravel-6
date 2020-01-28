@@ -32,3 +32,11 @@ Route::get('usuario/{nombre?}',function($nombre='Invitado'){
 Route::get('usuario/{nombre}/comentario/{comentarioid}',function($nombre, $comentarioid){
     return 'Usuario '.$nombre.' y el comentario es '.$comentarioid;
 });
+
+Route::get('user/{nombre}',function($nombre){
+    return 'Usuario '.$nombre;
+})->where('nombre', '[A-Za-z]+');
+
+Route::get('user1/{nombre}',function($nombre){
+    return 'Usuario '.$nombre;
+})->where('nombre', '[0-9]+');
