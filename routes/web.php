@@ -27,17 +27,9 @@ Route::get('usuario/{nombre?}','usuarioController@usuariounparametro')->name('us
 
 Route::get('usuario/{nombre}/comentario/{comentarioid}','usuarioController@usuariodosparametro');
 
-Route::get('user/{nombre}',function($nombre){
-    return 'Usuario '.$nombre;
-})->where('nombre', '[A-Za-z]+');
-
-Route::get('user1/{nombre}',function($nombre){
-    return 'Usuario '.$nombre;
-})->where('nombre', '[0-9]+');
-
-Route::get('user2/{id}/{nombre}',function($id,$nombre){
-    return 'Usuario '.$id. ' y el nombre es '.$nombre;
-})->where(
+Route::get('user/{nombre}','usuario\userController@user')->where('nombre', '[A-Za-z]+');
+Route::get('user1/{id}','usuario\userController@user1')->where('id', '[0-9]+');
+Route::get('user2/{id}/{nombre}','usuario\userController@user2')->where(
     [
         'id' => '[0-9]+',
         'nombre'=> '[A-Za-z]+'
