@@ -27,7 +27,7 @@ Route::get('hola', function() {
 
 Route::get('usuario/{nombre?}',function($nombre='Invitado'){
     return 'Usuario '.$nombre;
-});
+})->name('usuarionombre');
 
 Route::get('usuario/{nombre}/comentario/{comentarioid}',function($nombre, $comentarioid){
     return 'Usuario '.$nombre.' y el comentario es '.$comentarioid;
@@ -56,4 +56,9 @@ Route::get('prueba', function(){
 
 Route::get('redirigirprueba', function(){
     return redirect()->route('pruebaroute');
+});
+
+
+Route::get('redirigirprueba1', function(){
+    return redirect()->route('usuarionombre', ['nombre'=>'Alejandrooo']);
 });
